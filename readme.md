@@ -796,5 +796,17 @@ Apply complete! Resources: 19 added, 0 changed, 0 destroyed.
 1.  Создадим конф. файлы terraform для машин укаказанных в задании
 2. С помощью terraform(dns.tf) создадим записи в днс
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20014811.png)
-3. Мы будем использовать готовую роль(https://github.com/geerlingguy/ansible-role-certbot/) для установки nginx и настройка Lets Encrypt, дополнительно нам понадобится https://galaxy.ansible.com/ansible/posix
+3. Мы будем использовать готовую роль(https://github.com/geerlingguy/ansible-role-certbot/) для установки nginx и настройки Lets Encrypt, дополнительно нам понадобится https://galaxy.ansible.com/ansible/posix
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20014646.png)
+
+Выпущенный сертификат:
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20020633.png)
+
+4. Установка кластера MySQL
+Результаты:
+MySQL работает в режиме репликации Master/Slave.
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20021915.png)
+В кластере автоматически создаётся база данных c именем wordpress.
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20022607.png)
+В кластере автоматически создаётся пользователь wordpress с полными правами на базу wordpress и паролем wordpress
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20022834.png)
