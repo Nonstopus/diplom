@@ -39,6 +39,7 @@
 
 4. Создайте VPC с подсетями в разных зонах доступности.
 network.tf
+````
     # Network
     resource "yandex_vpc_network" "default" {
       name = "net"
@@ -62,6 +63,6 @@ network.tf
         next_hop_address   = "192.168.100.100"
       }
     }
-    
+````    
 
 5. Убедитесь, что теперь вы можете выполнить команды terraform destroy и terraform apply без дополнительных ручных действий.
