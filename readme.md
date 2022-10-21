@@ -790,3 +790,11 @@ Apply complete! Resources: 19 added, 0 changed, 0 destroyed.
 
 Результат в консоли YC
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-20%20015817.png)
+
+3.  Настроить внешний Reverse Proxy на основе Nginx и LetsEncrypt.
+
+1.  Создадим конф. файлы terraform для машин укаказанных в задании
+2. С помощью terraform(dns.tf) создадим записи в днс
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20014811.png)
+3. Мы будем использовать готовую роль(https://github.com/geerlingguy/ansible-role-certbot/) для установки nginx и настройка Lets Encrypt, дополнительно нам понадобится https://galaxy.ansible.com/ansible/posix
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20014646.png)
