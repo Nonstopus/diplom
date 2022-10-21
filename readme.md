@@ -20,3 +20,15 @@
 
 Зарегистрирован домен у регистратора reg.ru.
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20010915.png)
+
+2.  Создание инфраструктуры.
+Предварительная подготовка:
+Создаем сервисный аккаунт, который будет в дальнейшем использоваться Terraform для работы с инфраструктурой с необходимыми и достаточными правами. 
+
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-18%20010152.png)
+
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-19%20004331.png)
+
+Подготовим backend для Terraform, будем использовать альтернативный вариант: S3 bucket в созданном YC аккаунте.
+
+![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-19%20015235.png)
