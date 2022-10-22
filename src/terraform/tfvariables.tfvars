@@ -1,0 +1,10 @@
+yandex_cloud_id = "b1go25qu14ai0gmnuah1"
+yandex_folder_id = "b1gtok8tlhffaunrl10r"
+centos-7-base = "fd8938dc7u2rbp8skt2n"
+image_id = "fd81u2vhv3mc49l1ccbb" //ubuntu 20.04
+service_account_id = "aje4ghtju6akoj1eoudm"
+CIDR_blocks = ["192.168.100.0/24", "192.168.200.0/24"]
+zones = ["ru-central1-a", "ru-central1-b"]
+sub_domain = ["@", "www", "gitlab", "grafana", "prometheus", "alertmanager"]
+static_ip = "62.84.115.46"
+domain = "netodiplom.ru"
