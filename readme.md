@@ -28,7 +28,6 @@
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-18%20010152.png)
 
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-19%20004331.png)
-![](https://github.com/Nonstopus/diplom/blob/main/img/jobs_with_tag.png)
 
 Подготовим backend для Terraform, будем использовать альтернативный вариант: S3 bucket в созданном YC аккаунте.
 
@@ -838,3 +837,5 @@ MySQL работает в режиме репликации Master/Slave.
 
 Задача выполняемая при коммите с тегом и без тега
 ![](https://github.com/Nonstopus/diplom/blob/main/img/without_tag.png)
+
+![](https://github.com/Nonstopus/diplom/blob/main/img/jobs_with_tag.png)
