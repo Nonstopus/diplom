@@ -16,12 +16,12 @@
 
 # Этапы выполнения:
 
-1. Регистрация доменного имени
+## 1. Регистрация доменного имени
 
 Зарегистрирован домен у регистратора reg.ru.
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20010915.png)
 
-2.  Создание инфраструктуры.
+## 2.  Создание инфраструктуры.
 Предварительная подготовка:
 Создаем сервисный аккаунт, который будет в дальнейшем использоваться Terraform для работы с инфраструктурой с необходимыми и достаточными правами. 
 
@@ -33,52 +33,11 @@
 
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-19%20015235.png)
 
-3. Настройка workspaces
+### Настройка workspaces
 
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-19%20013454.png)
 
-4. Создайте VPC с подсетями в разных зонах доступности.
-network.tf
-# Задание
-Вопросы по заданию
-Преподаватель: Булат Замилов, Олег Букатчук, Руслан Жданов
-Дипломный практикум в YandexCloud
-
-# Цели:
-
-1. Зарегистрировать доменное имя (любое на ваш выбор в любой доменной зоне).
-2. Подготовить инфраструктуру с помощью Terraform на базе облачного провайдера YandexCloud.
-3. Настроить внешний Reverse Proxy на основе Nginx и LetsEncrypt.
-4. Настроить кластер MySQL.
-5. Установить WordPress.
-6. Развернуть Gitlab CE и Gitlab Runner.
-7. Настроить CI/CD для автоматического развёртывания приложения.
-8. Настроить мониторинг инфраструктуры с помощью стека: Prometheus, Alert Manager и Grafana.
-
-# Этапы выполнения:
-
-1. Регистрация доменного имени
-
-Зарегистрирован домен у регистратора reg.ru.
-![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20010915.png)
-
-2.  Создание инфраструктуры.
-Предварительная подготовка:
-Создаем сервисный аккаунт, который будет в дальнейшем использоваться Terraform для работы с инфраструктурой с необходимыми и достаточными правами. 
-
-![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-18%20010152.png)
-
-![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-19%20004331.png)
-
-Подготовим backend для Terraform, будем использовать альтернативный вариант: S3 bucket в созданном YC аккаунте.
-
-![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-19%20015235.png)
-
-3. Настройка workspaces
-
-![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-19%20013454.png)
-
-4. Создайте VPC с подсетями в разных зонах доступности.
+### Создайте VPC с подсетями в разных зонах доступности.
 network.tf
 ````
     # Network
@@ -105,7 +64,7 @@ network.tf
       }
     }
 ````
-5. Убедитесь, что теперь вы можете выполнить команды terraform destroy и terraform apply без дополнительных ручных действий.
+### Убедитесь, что теперь вы можете выполнить команды terraform destroy и terraform apply без дополнительных ручных действий.
 
 ````
 root@DESKTOP-6BS89JJ:/home/nonstop/diplom/src/terraform# terraform apply -var-file="tfvariables.tfvars"
@@ -791,7 +750,7 @@ Apply complete! Resources: 19 added, 0 changed, 0 destroyed.
 Результат в консоли YC
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-20%20015817.png)
 
-3.  Настроить внешний Reverse Proxy на основе Nginx и LetsEncrypt.
+## 3.  Настроить внешний Reverse Proxy на основе Nginx и LetsEncrypt.
 
 1.  Создадим конф. файлы terraform для машин укаказанных в задании
 2. С помощью terraform(dns.tf) создадим записи в днс
@@ -803,7 +762,7 @@ Apply complete! Resources: 19 added, 0 changed, 0 destroyed.
 
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20020633.png)
 
-4. Установка кластера MySQL
+## 4. Установка кластера MySQL
 Результаты:
 MySQL работает в режиме репликации Master/Slave.
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20021915.png)
@@ -812,7 +771,7 @@ MySQL работает в режиме репликации Master/Slave.
 В кластере автоматически создаётся пользователь wordpress с полными правами на базу wordpress и паролем wordpress
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20022834.png)
 
-5.  Установка WordPress
+## 5.  Установка WordPress
 Установлен nginx
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20232337.png)
 Установлен wordpress
@@ -824,7 +783,7 @@ MySQL работает в режиме репликации Master/Slave.
 Главная страница открывается по заданному URL
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-22%20232717.png)
 
-6. Установка Gitlab CE и Gitlab Runner
+## 6. Установка Gitlab CE и Gitlab Runner
 После исполнения роли Gitlab доступен
 
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-23%20000503.png)
@@ -841,7 +800,7 @@ MySQL работает в режиме репликации Master/Slave.
 
 ![](https://github.com/Nonstopus/diplom/blob/main/img/jobs_with_tag.png)
 
-7.Установка Prometheus, Alert Manager, Node Exporter и Grafana:
+## 7.Установка Prometheus, Alert Manager, Node Exporter и Grafana:
 
 ![](https://github.com/Nonstopus/diplom/blob/main/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-10-23%20021750.png)
 
